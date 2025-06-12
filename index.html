@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Presente 3 - Código Secreto</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #00ffcc;
+            font-family: 'Courier New', monospace;
+            padding: 40px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: #1e1e1e;
+            padding: 30px;
+            border: 2px dashed #00ffcc;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #00ffaa;
+            text-align: center;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            background-color: #000000;
+            padding: 20px;
+            border: 1px solid #00ffcc;
+            border-radius: 10px;
+        }
+        .input-section {
+            margin-top: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            font-size: 16px;
+            border: 1px solid #00ffcc;
+            border-radius: 5px;
+            background-color: #121212;
+            color: #00ffcc;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #00ffaa;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #000000;
+        }
+        .hint {
+            margin-top: 15px;
+            color: #ff6666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚠️ Acesso Restrito ⚠️</h1>
+        <p><strong>Atenção:</strong> hoje, dia <strong>12/06/25</strong>, <strong>Dia dos Namorados</strong> e aproximadamente <strong>4º mês do nosso discernimento</strong>, é também o <strong>terceiro presente</strong> que você recebe em preparação ao seu aniversário.</p>
+        <p><strong>Isso significa que faltam 7 dias.</strong></p>
+        <p>Continue lendo com descrição, lembrando que o conteúdo dessa mensagem é altamente sigiloso.</p>
+
+        <div class="input-section">
+            <label for="codigo">Digite o código para desbloquear a mensagem:</label><br><br>
+            <input type="text" id="codigo" placeholder="Digite aqui...">
+            <button onclick="verificarCodigo()">Acessar</button>
+            <p id="hint" class="hint" style="display:none;">Dica: São duas palavras. Foi algo que eu disse para você sem perceber em um ônibus, mas que você reparou e não esqueceu.</p>
+        </div>
+
+        <div id="mensagem" class="hidden-message">
+            <p>Biel, o tanto que eu te amo, você sabe. Eu não sei porque exatamente demorei tanto para admitir isso, mas tudo está acontecendo conforme deve acontecer. Eu não vou mentir, sou muito adépita de dias comemorativos, então ano que vem você não escapa do dia dos namorados rs. Mas sou muito feliz e grata pelo que estamos vivendo e constuindo hoje. E não trocaria esse momento por nada, pois cada parte da nossa história é importante para mim. O presente de hoje é mais simples, é mais um lembrete do meu amor e carinho. Uma forma de fazermos a contagem regressiva do seu aniversário juntos. Eu te admiro, meu bem. Você é um homem incrível, forte, corajoso e esforçado. Obrigada por me permitir dividir os dias com você. 7 diasssss.</p>
+        </div>
+    </div>
+
+    <script>
+        function verificarCodigo() {
+            const codigo = document.getElementById('codigo').value.trim().toLowerCase();
+            const correto = "nosso casamento";
+            if (codigo === correto) {
+                document.getElementById('mensagem').style.display = 'block';
+                document.getElementById('hint').style.display = 'none';
+            } else {
+                document.getElementById('hint').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
